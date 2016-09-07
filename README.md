@@ -21,4 +21,4 @@ To install via composer add the following to your composer.json file
     }
 ```
 
-- Add `"lpeabody/drush-xhgui": "devmaster"` to your `composer.json` file and run `composer update`.
+- Add `"lpeabody/drush-xhgui": "dev-master"` to your `composer.json` file and run `composer update`.
