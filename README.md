@@ -10,10 +10,10 @@ $options['xhgui-header'] = '/path/to/xhgui/external/header.php';'
 
 Once this has been added, simply add the `--xhgui` flag to any drush command to record the run.
 
-# Composer
+# Composer Install
 To install via composer add the following to your composer.json file
 
-## Add to your repositories array
+- Add to your `"repositories"` array:
 ```json
 "repositories": [
     {
@@ -22,9 +22,5 @@ To install via composer add the following to your composer.json file
     }
 ]
 ```
-## Add to your require array:
-```json
-"require" : {
-  "lpeabody/drush-xhgui": "master"
-}
-```
+
+-- Add `"lpeabody/drush-xhgui": "devmaster"` to your `composer.json` file and run `composer update`.
