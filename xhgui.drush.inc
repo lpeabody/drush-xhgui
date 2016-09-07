@@ -1,5 +1,10 @@
 <?php
 /**
+ * @file
+ * XHGui integration for Drush.
+ */
+
+/**
  * Implements hook_drush_help_alter().
  */
 function xhgui_drush_help_alter(&$command) {
@@ -8,17 +13,26 @@ function xhgui_drush_help_alter(&$command) {
     $command['options']['xhgui'] = array(
       'description' => 'Enable XHProf profiling via XHGui.',
     );
-    $command['sub-options']['xhgui']['xhgui-header'] = 'Absolute path to XHGui\'s header.php file.';
+    $command['options']['xhgui-header'] = 'Absolute path to XHGui\'s header.php file.';
   }
 }
 
+/**
+ * Implements hook_drush_init().
+ */
 function xhgui_drush_init() {
   if (xhgui_enabled()) {
-    $header = drush_get_option('xhgui-header', FALSE);
+    $header = drush_get_option('xhgui-header');
     require_once $header;
   }
 }
 
+/**
+ * Determines whether or not xhgui is available to run.
+ *
+ * @return boolean
+ *   TRUE is XHProf and XHGui is installed, FALSE otherwise.
+ */
 function xhgui_enabled() {
   if (drush_get_option('xhgui')) {
     $header = drush_get_option('xhgui-header', FALSE);
