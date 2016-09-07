@@ -15,12 +15,10 @@ To install via composer add the following to your composer.json file
 
 - Add to your `"repositories"` array:
 ```json
-"repositories": [
     {
       "type": "vcs",
       "url": "https://github.com/lpeabody/drush-xhgui"
     }
-]
 ```
 
 -- Add `"lpeabody/drush-xhgui": "devmaster"` to your `composer.json` file and run `composer update`.
