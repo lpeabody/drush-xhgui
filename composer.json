@@ -1,0 +1,16 @@
+{
+  "name" : "lpeabody/drush-xhgui",
+  "description" : "xhgui integration for Drush",
+  "type" : "drupal-drush",
+  "license": "GPL-2.0+",
+  "authors": [
+      {
+          "name": "Les Peabody",
+          "role": "Creator"
+      }
+  ],
+   "require": {
+      "drush/drush": "~8.1.*",
+      "perftools/xhgui": "dev-master"
+  }
+}
