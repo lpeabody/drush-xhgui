@@ -10,7 +10,7 @@
       }
   ],
    "require": {
-      "drush/drush": "~8.*",
+      "drush/drush": "~8.1.*",
       "perftools/xhgui": "dev-master"
   }
 }
